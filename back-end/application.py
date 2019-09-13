@@ -33,7 +33,7 @@ application = app = Flask(__name__)
 
 CORS(app, origins=[r"https://app.qwikinsights.com", r"http://localhost:8080"], supports_credentials=True)
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://postgres:12341234@database-1.ch87ikotury1.us-east-2.rds.amazonaws.com"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://postgres:YOUR AWS POSTGRES LINK"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["PROPAGATE_EXCEPTIONS"] = True
 
