@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+awsebcli = "*"
+
+[packages]
+flask = "*"
+flask-restful = "*"
+flask-cors = "*"
+flask-sqlalchemy = "*"
+psycopg2-binary = "*"
+boto3 = "*"
+pandas = "*"
+flask-jwt-extended = "*"
+
+[requires]
+python_version = "3.6"

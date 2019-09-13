@@ -1,0 +1,26 @@
+-i https://pypi.org/simple
+aniso8601==7.0.0
+boto3==1.9.205
+botocore==1.12.205
+click==7.0
+docutils==0.14
+flask-cors==3.0.8
+flask-jwt-extended==3.21.0
+flask-restful==0.3.7
+flask-sqlalchemy==2.4.0
+flask==1.1.1
+itsdangerous==1.1.0
+jinja2==2.10.1
+jmespath==0.9.4
+markupsafe==1.1.1
+numpy==1.17.0
+pandas==0.25.0
+psycopg2-binary==2.8.3
+pyjwt==1.7.1
+python-dateutil==2.8.0 ; python_version >= '2.7'
+pytz==2019.2
+s3transfer==0.2.1
+six==1.12.0
+sqlalchemy==1.3.6
+urllib3==1.25.3 ; python_version >= '3.4'
+werkzeug==0.15.5
