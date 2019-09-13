@@ -1,0 +1,69 @@
+.datatab{
+    background-color: $lighter-primary;
+    
+    border: 1px solid $dark-primary;
+    height: 1.5rem;
+    border-radius: 5rem;
+
+    padding: .5rem;
+    margin: 1rem;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(tab-land){
+        height: 1.8rem;
+    }
+    @include respond(tab-port){
+        height: 2rem;
+    }
+    @include respond(phone){
+        height: 2.5rem;
+    }
+
+    &__name{
+        font-size: 1.3rem;
+        display: inline;
+        cursor: pointer;
+        transition: all .2s;
+        &:hover{
+            color: $mid-primary;
+        }
+
+        @include respond(tab-land){
+            font-size: 1.5rem;
+        }
+        @include respond(tab-port){
+            font-size: 1.8rem;
+        }
+        @include respond(phone){
+            font-size: 2rem;
+        }
+    }
+    
+    &__delete{
+        display: inline;
+        display: flex;
+        align-items: center;
+
+        margin: .5rem;
+        cursor: pointer;
+        
+        justify-content: center;
+        &-svg{
+            width: 1.2rem;
+            height: 1.2rem;
+            transition: all .2s;
+            &:hover{
+                fill: $mid-primary;
+            }
+        }
+
+        
+    }
+
+    &.selected{
+        border: 2px solid $logo-col;
+    }
+}

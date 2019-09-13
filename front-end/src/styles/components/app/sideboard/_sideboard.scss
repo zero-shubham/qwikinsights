@@ -1,0 +1,69 @@
+.sideboard{
+    border-left: 1px solid $dark-primary;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 1rem 1rem 1rem 1rem rgba(0,0,0,0.5);
+
+    background-color: $sideboard_background;
+    
+    overflow: hidden;
+
+    &__bottom{
+        height: 95%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        font-family: 'Kalam', cursive;
+        font-size: $large-font;
+        line-height: $largest-font;
+        color: $logo-col;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-svg{
+            width: 4rem;
+            height: 4rem;
+            display: block;
+            &.inactive{
+                display: none;
+            }
+
+            &.index{
+                width: 8rem;
+                height: 8rem;
+            }
+
+            @include respond(tab-land){
+                width: 5rem;
+                height: 5rem;
+            }
+            @include respond(tab-port){
+                width: 6rem;
+                height: 6rem;
+            }
+            @include respond(phone){
+                width: 7rem;
+                height: 7rem;
+            }
+        }
+        @include respond(tab-land){
+            font-size: $large-font;
+        }
+        @include respond(tab-port){
+            font-size: $larger-font;
+        }
+        @include respond(phone){
+            font-size: $largest-font;
+        }
+    }
+
+    &__hr{
+        width: 100%;
+    }
+}

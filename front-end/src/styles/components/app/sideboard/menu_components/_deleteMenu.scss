@@ -1,0 +1,25 @@
+.deleteMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 80%;
+
+    & > :not(:last-child){
+        margin-bottom: 1rem;
+    }
+    &__radio{
+        display: flex;
+        flex-direction: column;
+
+        width: 20rem;
+
+        & > :not(:last-child){
+            margin-bottom: 1rem;
+        }
+        & > span{
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+}

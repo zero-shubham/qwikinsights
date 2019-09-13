@@ -1,0 +1,40 @@
+.app{
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    overflow: hidden;
+    &__col1{
+        width: 75%;
+        transition: all .2s;
+
+        &.mobile{
+            width: 95%;
+            &.slide{
+                width: 60%;
+                @include respond(phone){
+                    width: 50%;
+                }
+            }
+        }
+        
+    }
+
+    &__col2{
+        width: 25%;
+        transition: all .2s;
+        z-index: 100;
+        &.mobile{
+            width: 5%;
+            &.slide{
+                width: 40%;
+                @include respond(phone){
+                    width: 50%;
+                }
+            }
+        }
+        
+    }
+
+}
+

@@ -1,0 +1,145 @@
+.user{
+    
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 2rem;
+    @include respond(tab-land){
+        font-size: 1.5rem;
+    }
+    @include respond(tab-port){
+        font-size: 2rem;
+    }
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
+
+    &.expand{
+        min-height: 95%;
+    }
+
+    &.collapse{
+        display: none;
+    }
+
+    &__settings{
+        margin: 1rem 0;
+        min-height: 75%;
+        display: none;
+    }
+    .expand &__settings{
+        display: block;
+    }
+
+    & > :not(:last-child){
+        margin-bottom: 1rem;
+    }
+    &__name{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    &__email{
+        font-weight: 300;
+    }
+    
+    &__darkmode{
+        &-tag{
+            display: flex;
+        }
+        margin-left: 2rem;
+        border: 1px solid $dark-primary;
+        width: 3rem;
+        height: 1.5rem;
+        border-radius: 5rem;
+
+        display: flex;
+        align-items: center;
+        padding: .1rem;
+        cursor: pointer;
+        &-btn{
+            background-color: $mid-primary;
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 100%;
+
+            transform: translateX(5%);
+
+            transition: transform .2s;
+        }
+
+        &.dark &-btn{
+            transform: translateX(125%);
+        }
+    }
+
+    &__logout{
+        
+        cursor: pointer;
+        color: $mid-primary;
+        padding: .5rem;
+        margin: .5rem auto;
+        border: .1rem solid $mid-primary;
+
+        
+        border-radius: 5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: all .1s;
+        &:hover{
+            color: $dark-primary;
+            font-weight: bold;
+            margin: .3rem auto;
+            border: .3rem solid $mid-primary;
+        }
+
+        @include respond(tab-land){
+            font-size: 1.5rem;
+        }
+        @include respond(tab-port){
+            font-size: 2rem;
+        }
+        @include respond(phone){
+            font-size: 2.5rem;
+            padding: .8rem;
+        }
+    }
+
+    &__details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-container{
+            & > :not(:last-child){
+                margin-bottom: .3rem;
+            }
+
+        }
+        &-settings{
+            &-svg{
+                width: 2rem;
+                height: 2rem;
+                cursor: pointer;
+
+                transition: all .2s;
+                &:hover{
+                    fill: $mid-primary;
+                    transform: rotate(180deg);
+                }
+                @include respond(tab-land){
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+                @include respond(tab-port){
+                    width: 3rem;
+                    height: 3rem;
+                }
+            }
+        }
+    }
+}

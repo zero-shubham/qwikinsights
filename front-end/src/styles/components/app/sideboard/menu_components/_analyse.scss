@@ -1,0 +1,42 @@
+.analyse{
+    overflow: auto;
+    &.center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar-track
+        {
+            background-color: transparent;
+            margin: 1rem;
+        }
+        &::-webkit-scrollbar
+        {
+            height: .5rem;
+            width: .5rem;
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb
+        {
+            border-radius: 10px;
+            background-color: $logo-col;
+        }
+    }
+
+    &.center &__links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__links{
+        width: 100%;
+        & > *{
+            margin-bottom: 1rem;
+            
+            @include respond(tar-land){
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

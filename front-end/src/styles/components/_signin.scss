@@ -1,0 +1,173 @@
+.signin{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & > :not(:last-child){
+        margin-bottom: 2rem;
+    }
+
+    &__logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        font-family: 'Kalam', cursive;
+        font-size: $largest-font;
+        font-weight: 400;
+        line-height: $largest-font;
+        transform: translateY(8rem);
+
+        transition: all .3s;
+        &.active{
+            transform: translateY(1rem);
+        }
+
+        @include respond(tab-land){
+            font-size: $resp-large;
+            width: 100%;
+        }
+        @include respond(tab-port){
+            font-size: $resp-tabport-large;
+        }
+        @include respond(phone){
+            font-size: $resp-phone-large;
+        }
+    }
+
+    &__signupdialog{
+        &-button{
+            cursor: pointer;
+
+            border-bottom: 1px solid $dark-primary;
+        }
+    }
+
+    &__inputs{
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        & > :not(:last-child){
+            margin-bottom: 1rem;
+        }
+        @include respond(tab-land){
+            width: 90%;
+        }
+        @include respond(tab-port){
+            width: 75%;
+        }
+        &-warn{
+            color: red;
+            font-size: 1rem;
+            transform: translateY(3rem);
+            z-index: -10;
+            opacity: 0;
+            transition: opacity .2s .1s transform .2s;
+
+            &.active{
+                display: inline;
+                animation: floatup .2s forwards;
+            }
+        }
+
+        &-text{
+            padding: 1rem;
+            border: 1px solid $dark-primary;
+            border-radius: .8rem;
+            color: $dark-primary;
+            width: 30%;
+            transition: transform .2s;
+
+            @include respond(tab-land){
+                width: 50%;
+                padding: 1.5rem;
+            }
+            @include respond(tab-port){
+                width: 60%;
+                padding: 1.5rem;
+            }
+            @include respond(phone){
+                width: 85%;
+                padding: 2rem;
+            }
+
+            &:focus{
+                outline: none;
+                transform: scaleX(1.05);
+            }
+
+            &::placeholder{
+                color: $dark-primary;
+            }
+
+
+            &.inactive{
+                opacity: 0;
+            }
+
+            &.active{
+                transition: all .2s .1s;
+                display: block;
+                animation: fadein .5s forwards;
+            }
+        }
+
+        &-button{
+            margin-top: 1rem;
+            outline: none;
+            border: 1px solid $dark-primary;
+            border-radius: .5rem;
+            padding: .5rem;
+            width: 15%;
+            backface-visibility: hidden;
+
+            background-color: $dark-primary;
+            color: white;
+            box-shadow: .1rem .1rem 1rem .1rem rgba(0, 0, 0,.5);
+            transition: all .2s;
+
+            @include respond(tab-land){
+                width: 25%;
+                padding: 1rem;
+            }
+            @include respond(tab-port){
+                width: 30%;
+            }
+            @include respond(phone){
+                width: 40%;
+                padding: 1.5rem;
+            }
+
+            &:hover, &:active, &:visited, &:focus{
+                width: 18%;
+                @include respond(tab-land){
+                    width: 28%;
+                }
+                @include respond(tab-port){
+                    width: 33%;
+                }
+                @include respond(phone){
+                    width: 43%;
+                }
+            }
+        }
+    }
+
+    &__failure{
+        position: relative;
+        top: 65%;
+        opacity: 0;
+        display: none;
+        color: #5bb5f5;
+        text-transform: uppercase;
+        &.active{
+            display: inline;
+            animation: sinkdown .2s forwards;
+        }
+    }
+}

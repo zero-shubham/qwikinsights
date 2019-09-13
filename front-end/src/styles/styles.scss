@@ -1,0 +1,25 @@
+@import "./abstract/animations";
+@import './abstract/mixins';
+@import './abstract/variables';
+@import './base/base';
+
+@import "./components/app/app";
+@import "./components/app/canvas";
+@import "./components/app/topboard/datatab";
+
+@import "./components/container";
+
+@import "./components/app/sideboard/sideboard";
+@import "./components/app/sideboard/user";
+@import "./components/app/sideboard/menu";
+@import "./components/app/sideboard/menu_components/analyse";
+@import "./components/app/sideboard/menu_components/applyMethods";
+@import "./components/app/sideboard/menu_components/deleteMenu";
+@import "./components/app/sideboard/menu_components/loadDatabook";
+@import "./components/app/sideboard/menu_components/menuLink";
+
+@import "./components/app/table/table";
+@import "./components/app/topboard/topboard";
+@import "./components/app/topboard/datatab";
+
+@import "./components/signin";

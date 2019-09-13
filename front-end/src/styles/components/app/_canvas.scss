@@ -1,0 +1,38 @@
+.canvas{
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    
+    &__illustration{
+        width: 60%;
+        @include respond(tab-land){
+            width: 90%;
+        }
+    }
+
+    &__top{
+        display: flex;
+        justify-content: center;
+        
+        &-head{
+            margin-bottom: 5rem;
+            font-size: 3rem;
+            @include respond(tab-land){
+                font-size: 3rem;
+            }
+        }
+    }
+    &__header{
+        margin-bottom: 5rem;
+        &-svg{
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            left: 70%;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.signup{
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+
+    &__illustration{
+        width: 80%;
+        position: relative;
+        & > img {
+            width: 80%;
+            position: absolute;
+            top: 20%;
+            left: 5%;
+        }
+
+        &-shape{
+            width: 100%;
+            height: 90rem;
+            background-color: orange;
+            background-size: cover;
+            border-bottom-right-radius: 40rem* 2;
+            border-top-right-radius: 40rem * 2;
+        }
+        
+    }
+
+    &__input{
+        position: absolute;
+        top: 70%;
+        left: 20%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & > :not(:last-child){
+            margin-bottom: 2rem;
+        }
+        &-text{
+            width: 80%;
+            padding: 1rem;
+        }
+
+        &-btn{
+            width: 40%;
+            background-color: black;
+            color: whitesmoke;
+            border-radius: .5rem;
+        }
+    }
+
+
+}

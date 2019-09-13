@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+html{
+    font-size: 62.5%;
+    
+
+
+	@include respond(tab-land){
+		font-size: 56.25%;
+	}
+	@include respond(tab-port){
+		font-size: 50%;
+	}
+	@include respond(phone){
+		font-size: 30%;
+    }
+    @include respond(phone-s){
+		font-size: 25%;
+	}
+	
+	@include respond(big-desk){
+        font-size: 75%;
+    }
+}
+
+//font-family: 'Kalam', cursive;
+
+body{
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.5rem;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    @media (max-width: 75em) and (orientation:landscape){
+        overflow: auto;
+    }
+    @include respond(tab-land){
+        font-size: 2rem;
+	}
+	@include respond(tab-port){
+		font-size: 2rem;
+	}
+	@include respond(phone){
+		font-size: 3rem;
+	}
+	
+	@include respond(big-desk){
+        font-size: 2.5rem;
+    }
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+}
+
+.subscribe{
+    display: none;
+}

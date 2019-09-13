@@ -1,0 +1,138 @@
+.menu{
+    padding: 1rem;
+    justify-content: space-evenly;
+    max-height: 72%;
+
+    &.collapse{
+        display: none;
+    }
+    & > :not(:last-child){
+        margin-bottom: 2rem;
+    }
+    &__container{
+        height: 80%;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar-track
+        {
+            background-color: transparent;
+            margin: 1rem;
+        }
+        &::-webkit-scrollbar
+        {
+            height: .5rem;
+            width: .5rem;
+            background-color: transparent;
+
+            @include respond(tab-port){
+                height: 1rem;
+            }
+        }
+        &::-webkit-scrollbar-thumb
+        {
+            border-radius: 10px;
+            background-color: $logo-col;
+        }
+    }
+    
+    &__tabs{
+        display: flex;
+        justify-content: space-around;
+        overflow: hidden;
+        &-btn{
+            cursor: pointer;
+            text-transform: uppercase;
+    
+            border: .2rem solid $mid-primary;
+            border-radius: 2rem;
+            padding: .5rem;
+    
+            color: $mid-primary;
+            font-weight: bold;
+            transform: inherit;
+            transition: all .1s;
+            &:hover{
+                color: $dark-primary;
+                font-weight: bold;
+            }
+    
+            &.active{
+                color: $dark-primary;
+                font-weight: bold;
+            }
+
+            @include respond(tab-land){
+                font-size: 1.5rem;
+                padding: .8rem;
+            }
+            @include respond(tab-port){
+                font-size: 2rem;
+                padding: .8rem;
+            }
+            @include respond(tab-port){
+                font-size: 2.5rem;
+                padding: .8rem;
+            }
+        }
+    }
+
+    &__input{
+        outline: none;
+        padding: 1rem;
+        border-radius: 5rem;
+        border: none;
+        border: 1px solid $mid-primary;
+
+        width:75%;
+    }
+
+    &__btn{
+        border: 1px solid $mid-primary;
+        border-radius: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-transform: uppercase;
+        font-weight: bold;
+
+        padding: .5rem;
+
+        cursor: pointer;
+
+        color: $light-primary;
+
+        &:hover{
+            color: $dark-primary;
+        }
+
+        @include respond(tab-land){
+            font-size: 1.5rem;
+            padding: .8rem;
+        }
+        @include respond(tab-port){
+            font-size: 2rem;
+        }
+        @include respond(phone){
+            font-size: 2.5rem;
+            padding: 1rem;
+        }
+    }
+
+    &__chkbox{
+        font-size: 1rem;
+        & > * {
+            cursor: pointer;
+        }
+        & > :not(:last-child){
+            margin-right: .5rem;
+        }
+    }
+
+    &__warn{
+        color: $logo-col;
+        font-weight: 100;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
