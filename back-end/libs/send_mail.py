@@ -27,7 +27,7 @@ SUBJECT = 'Account activation code'
 TEXT = 'Here is your activation code {} generated on {}, and is valid till {}.'
 
 gmail_sender = 'qwikinsights@gmail.com'
-gmail_passwd = 'qgkGieejzVW9USn'
+gmail_passwd = 'password:)'
 
 
 def generate_code() -> int:
