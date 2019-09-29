@@ -8,8 +8,8 @@ s3 = boto3.resource("s3")
 bucket = s3.Bucket("qwikinsights-store")
 
 s3_client = boto3.client("s3",
-                         aws_access_key_id="AKIA32TB6G3RWN674XS5",
-                         aws_secret_access_key="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",
+                         aws_access_key_id="",
+                         aws_secret_access_key="",
                          config=boto3.session.Config(signature_version='s3v4')
                          )
 
